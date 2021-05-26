@@ -16,36 +16,36 @@ THIS PROGRAM IS MAKED BY UTKARSH SHARMA @utkarshofficial
 
 void vsHH(){
     system("cls");
-    cout<<"   Human VS Human";
+    cout<<"        Human VS Human";
 }
 
 void vsPC(){
     system("cls");
-    cout<<"\tHuman VS Computer";
+    cout<<"        Human VS Computer";
 }
 
 void blockShow(char a[3][3])
 {
-    cout << "\n\n\tTic Tac Toe\n\n";
+    cout << "\n\t   Tic Tac Toe\n";
 
-    cout << "Player 1 {X}  _  Player 2 {O}" << endl
+    cout << "  Player 1 {X}  _  Player 2 {O}" << endl
          << endl;
     cout << endl;
 
-    cout << "     |     |     " << endl;
-    cout << "  " << a[0][0] << "  |  " << a[0][1] << "  |  " << a[0][2] << endl;
+    cout << "\t     |     |     " << endl;
+    cout << "\t  " << a[0][0] << "  |  " << a[0][1] << "  |  " << a[0][2] << endl;
 
-    cout << "_____|_____|_____" << endl;
-    cout << "     |     |     " << endl;
+    cout << "\t_____|_____|_____" << endl;
+    cout << "\t     |     |     " << endl;
 
-    cout << "  " << a[1][0] << "  |  " << a[1][1] << "  |  " << a[1][2] << endl;
+    cout << "\t  " << a[1][0] << "  |  " << a[1][1] << "  |  " << a[1][2] << endl;
 
-    cout << "_____|_____|_____" << endl;
-    cout << "     |     |     " << endl;
+    cout << "\t_____|_____|_____" << endl;
+    cout << "\t     |     |     " << endl;
 
-    cout << "  " << a[2][0] << "  |  " << a[2][1] << "  |  " << a[2][2] << endl;
+    cout << "\t  " << a[2][0] << "  |  " << a[2][1] << "  |  " << a[2][2] << endl;
 
-    cout << "     |     |     " << endl
+    cout << "\t     |     |     " << endl
          << endl;
 }
 
@@ -59,7 +59,7 @@ int main()
     HWND console = GetConsoleWindow();
     RECT ConsoleRect;
     GetWindowRect(console, &ConsoleRect);
-    MoveWindow(console, ConsoleRect.left, ConsoleRect.top, 320, 300, TRUE);
+    MoveWindow(console, ConsoleRect.left, ConsoleRect.top, 370, 370, TRUE);
     
     again:
     char a[3][3];
@@ -77,7 +77,7 @@ int main()
         system("cls");
         blockShow(a);
     int choice;
-    cout << "1. Play as Human VS Human, Enter 1\n2. Play as Human VS Computer, Enter 2\n";
+    cout << " 1. Play as Human VS Human, Enter 1\n 2. Play as Human VS Computer, Enter 2\n ";
     cin >> choice;
     if (choice == 1)
     {
@@ -257,6 +257,7 @@ int main()
             }
             if (p2 <= 0 || p2 >= 10)
             {
+
                 cout << "Invalid Move\n";
                 // invalid move accepter
                 goto b;
@@ -280,6 +281,7 @@ int main()
             // Winner condtions for O
             if ((a[0][0] == o && a[0][1] == o && a[0][2] == o) || (a[1][0] == o && a[1][1] == o && a[1][2] == o) || (a[2][0] == o && a[2][1] == o && a[2][2] == o) || (a[0][0] == o && a[1][0] == o && a[2][0] == o) || (a[0][1] == o && a[1][1] == o && a[2][1] == o) || (a[0][2] == o && a[1][2] == o && a[2][2] == o) || (a[0][0] == o && a[1][1] == o && a[2][2] == o) || (a[0][2] == o && a[1][1] == o && a[2][0] == o))
             {
+                
                 cout << o << " Player Winer !\n";
                 break;
             }
@@ -501,6 +503,7 @@ int main()
             // output the update array
             vsPC();
             blockShow(a);
+            
             cout << "O Player move is: " << p2 << endl;
 
             // Winner condtions for O
